@@ -357,8 +357,8 @@ footer .footer-logo {
 }
 
 @media screen and (max-width: 900px) {
-    .header-nav {
-        display: none;
+    .header-nav ul li a {
+        font-size: 14px;
     }
 }
 
