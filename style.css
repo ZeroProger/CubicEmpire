@@ -159,7 +159,7 @@ body {
 
 .news-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     justify-items: center;
     grid-auto-flow: dense;
     gap: 30px;
@@ -173,6 +173,8 @@ body {
     justify-content: space-between;
     width: 100%;
     align-self: center;
+    margin: 0;
+    padding: 0;
 }
 
 .news-container .news-item figure {
@@ -242,7 +244,7 @@ body {
 
 @media screen and (min-width: 993px) {
     .news-container .news-item .news-footer {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
