@@ -214,7 +214,7 @@ body {
     }
 }
 
-@media screen and (min-width: 993px) and  (max-width: 1200px) {
+@media screen and (min-width: 993px) {
     .news-container .news-item .news-description {
         font-size: 16px;
     }
@@ -240,7 +240,7 @@ body {
     }
 }
 
-@media screen and (min-width: 993px) and  (max-width: 1200px) {
+@media screen and (min-width: 993px) {
     .news-container .news-item .news-footer {
         font-size: 16px;
     }
