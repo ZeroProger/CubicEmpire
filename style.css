@@ -1,6 +1,58 @@
 body {
     font-family: CubicEmpireRE, serif;
-    background-color: #012d48;
+    background-image:   url("resources/backgrounds/back-full.png"),
+                        linear-gradient(#1a6fa3 20%, #012d48 20%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center, top center;
+}
+
+@media screen and (min-width: 300px) and (max-width: 450px){
+    body {
+        background-position: top 250px center, center;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 600px){
+    body {
+        background-position: top 220px center, center;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 750px){
+    body {
+        background-position: top 200px center, center;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 900px){
+    body {
+        background-position: top 180px center, center;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1050px){
+    body {
+        background-position: top 160px center, center;
+    }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1200px){
+    body {
+        background-position: top 120px center, center;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1350px){
+    body {
+        background-position: top 80px center, center;
+    }
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1500px){
+    body {
+        background-position: top 40px center, center;
+    }
 }
 
 .navbar {
@@ -92,13 +144,62 @@ body {
     box-shadow: none;
 }
 
-.header-logo-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    width: 12.0rem;
+.header-logo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
     margin-top: 80px;
     margin-bottom: 100px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 575px) {
+    .header-logo-img {
+        width: 160px;
+    }
+
+    .header-logo a {
+        width: 160px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .header-logo-img {
+        width: 200px;
+    }
+
+    .header-logo a {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .header-logo-img {
+        width: 200px;
+    }
+
+    .header-logo a {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .header-logo-img {
+        width: 220px;
+    }
+
+    .header-logo a {
+        width: 220px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .header-logo-img {
+        width: 220px;
+    }
+
+    .header-logo a {
+        width: 220px;
+    }
 }
 
 .header-title {
