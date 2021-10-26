@@ -594,9 +594,11 @@ footer {
     background: none;
     border: none;
 }
+
 .close:hover {
     opacity: 1;
 }
+
 .close:before, .close:after {
     position: absolute;
     left: 11px;
@@ -606,11 +608,19 @@ footer {
     width: 2px;
     background-color: #f2c029;
 }
+
 .close:before {
     transform: rotate(45deg);
 }
+
 .close:after {
     transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 992px) {
+    .close {
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
@@ -726,6 +736,18 @@ footer {
     }
 }
 
+.form-title {
+    width: 100%;
+    background-color: #012d48;
+    padding-top: 40px;
+}
+
+.form-title h2 {
+    width: 100%;
+    color: #f2c029;
+    text-align: center;
+}
+
 input {
     box-sizing: border-box;
     font-family: inherit;
@@ -772,7 +794,7 @@ input[type="password"]::placeholder {
 .fields-form .password input {
     width: 100%;
     min-height: 34px;
-    margin-top: 40px;
+    margin-top: 20px;
     padding-left: 10px;
     background-color: #083a59;
     border: none;
