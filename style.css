@@ -100,6 +100,7 @@ body {
 
 .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item a:hover {
     color: #f2c029;
+    text-decoration: underline;
 }
 
 .navbar .container-fluid .navbar-collapse .navbar-nav {
@@ -569,6 +570,302 @@ footer {
     .copyright {
         font-size: 16px;
     }
+}
+
+.hystmodal, .hystmodal__wrap, .hystmodal__window {
+    z-index: 2000 !important;
+}
+
+.hystmodal__shadow {
+    z-index: 1999 !important;
+}
+
+.hystmodal__close {
+    z-index: 1998 !important;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    background: none;
+    border: none;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 11px;
+    top: 0;
+    content: '';
+    height: 25px;
+    width: 2px;
+    background-color: #f2c029;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .hystmodal__window {
+        width: 80% !important;
+    }
+
+    .fields-form form {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    .fields-form .captcha-img {
+        width: 180px !important;
+        margin: 0 auto;
+    }
+
+    .fields-form .reset-password p {
+        font-size: 8px !important;
+    }
+
+    .fields-form .form-checkbox label {
+        font-size: 14px !important;
+    }
+
+    .registration-form .fields-form .form-checkbox label {
+        font-size: 9px !important;
+    }
+
+    .fields-form .email input,
+    .fields-form .password input {
+        font-size: 14px !important;
+    }
+
+    .fields-form .login-submit input {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .hystmodal__window {
+        width: 70% !important;
+    }
+
+    .fields-form form {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    .registration-form .fields-form .form-checkbox label {
+        font-size: 10px !important;
+    }
+
+    .fields-form .captcha-img {
+        width: 220px !important;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .hystmodal__window {
+        width: 50% !important;
+    }
+
+    .fields-form form {
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    .registration-form .fields-form .form-checkbox label {
+        font-size: 11px !important;
+    }
+
+    .fields-form .captcha-img {
+        width: 220px !important;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .hystmodal__window {
+        width: 40% !important;
+    }
+
+    .fields-form form {
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    .registration-form .fields-form .form-checkbox label {
+        font-size: 11px !important;
+    }
+
+    .fields-form .captcha-img {
+        width: 220px !important;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hystmodal__window {
+        width: 30% !important;
+    }
+
+    .fields-form form {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    .fields-form .captcha-img {
+        width: 220px !important;
+        margin: 0 auto;
+    }
+}
+
+input {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: white;
+}
+
+.login-form,
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields-form {
+    background-color: #012d48;
+    width: 100%;
+}
+
+.fields-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields-form form div:not(.form-checkbox) {
+    width: 100%;
+    margin: 0 25%;
+}
+
+.fields-form form .form-checkbox {
+    width: 100%;
+    margin: 30px 25%;
+}
+
+.fields-form .email input,
+.fields-form .password input {
+    width: 100%;
+    min-height: 34px;
+    margin-top: 40px;
+    padding-left: 10px;
+    background-color: #083a59;
+    border: none;
+    color: white;
+}
+
+.fields-form .password input {
+    margin-top: 20px;
+}
+
+.fields-form .form-checkbox label {
+    color: white;
+}
+
+.registration-form .fields-form .form-checkbox label {
+    display: block;
+    font-size: 12px;
+}
+
+.fields-form .captcha .captcha-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.registration-form .fields-form .captcha .captcha-img {
+    margin-bottom: 30px;
+}
+
+.fields-form .form-registration-button p a,
+.fields-form .form-login-button p a {
+    text-decoration: none;
+    color: white;
+}
+
+.fields-form .reset-password p {
+    color: white;
+    font-size: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.fields-form .reset-password p a {
+    display: inline;
+    color: #f2c029;
+    text-decoration: none;
+    border-bottom: 1px solid #f2c029;
+}
+
+.fields-form .login-submit input,
+.fields-form .registration-submit input {
+    width: 100%;
+    color: #f2c029;
+    background-color: #083a59;
+    border: none;
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+.fields-form .form-registration-button p,
+.fields-form .form-login-button p{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox + label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+.custom-checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #083a59;
+    background-size: 50% 50%;
+}
+
+.custom-checkbox:checked + label::before {
+    border-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
 @font-face {

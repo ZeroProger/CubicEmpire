@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CubicEmpire</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hystModal-0.4/dist/hystmodal.min.css">
+
 </head>
 <body>
     <header>
@@ -31,10 +33,10 @@
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Вход</a>
+                            <a class="nav-link" href="#" id="#modalLogin" data-hystmodal="#modalLogin">Вход</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Регистрация</a>
+                            <a class="nav-link" href="#" id="#modalRegistration" data-hystmodal="#modalRegistration">Регистрация</a>
                         </li>
                     </ul>
                 </div>
@@ -58,6 +60,75 @@
             </p>
         </div>
     </header>
+    <div class="hystmodal" id="modalLogin" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="close"></button>
+                <div class="login-form">
+                    <div class="fields-form">
+                        <form action="#" method="post">
+                            <div class="email">
+                                <input type="email" name="login-email" id="login-email" placeholder="Почта">
+                            </div>
+                            <div class="password">
+                                <input type="password" name="login-password" id="login-password" placeholder="Пароль">
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" class="custom-checkbox" name="login-remember-me" id="login-remember-me">
+                                <label for="login-remember-me">Запомнить меня</label>
+                            </div>
+                            <div class="captcha">
+                                <img class="captcha-img" alt="captcha" src="resources/captcha.png" width="268" height="67">
+                            </div>
+                            <div class="reset-password">
+                                <p>Не удаётся войти? <a href="#">Восстановить доступ</a></p>
+                            </div>
+                            <div class="login-submit">
+                                <input type="submit" name="login-submit" id="login-submit" value="Авторизоваться">
+                            </div>
+                            <div class="form-registration-button">
+                                <p><a href="#">Регистрация</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="modalRegistration" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="close"></button>
+                <div class="registration-form">
+                    <div class="fields-form">
+                        <form action="#" method="post">
+                            <div class="email">
+                                <input type="email" name="registration-email" id="registration-email" placeholder="Почта">
+                            </div>
+                            <div class="password">
+                                <input type="password" name="registration-password" id="registration-password" placeholder="Пароль">
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" class="custom-checkbox" name="registration-policy" id="registration-policy">
+                                <label for="registration-policy">
+                                    Согласен с условиями <a href="#">лицензионного соглашения</a> и <a href="#">политикой конфиденциальности</a>
+                                </label>
+                            </div>
+                            <div class="captcha">
+                                <img class="captcha-img" alt="captcha" src="resources/captcha.png" width="268" height="67">
+                            </div>
+                            <div class="registration-submit">
+                                <input type="submit" name="registration-submit" id="registration-submit" value="Зарегистрироваться">
+                            </div>
+                            <div class="form-login-button">
+                                <p><a href="#">Авторизация</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container page-splitter">
         <img class="splitter mx-auto" src="resources/splitter.svg" alt="Разделитель" width="1100" height="189">
     </div>
@@ -215,5 +286,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="hystModal-0.4/dist/hystmodal.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
