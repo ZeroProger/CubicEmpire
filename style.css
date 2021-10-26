@@ -427,10 +427,6 @@ body {
 .news-container .news-item .news-description {
     color: #ffffff;
     margin: 0 5px;
-    -webkit-line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .news-container .news-item .news-info{
