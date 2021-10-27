@@ -27,4 +27,31 @@ window.onload = function () {
             navCollapseBtn.setAttribute('aria-expanded', 'false');
         });
     }
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset;
+        var logo = document.querySelector('.header-logo-img');
+        var miniLogo = document.querySelector('.header-mini-logo-img');
+        var navBar = document.querySelector('.navbar');
+        if (window.innerWidth <= 992) {
+            if (scrollTop > 120) {
+                logo.style.transform = 'scale(0)';
+            } else {
+                logo.style.transform = 'scale(1)';
+            }
+        } else {
+            if (scrollTop > 0) {
+                logo.style.transform = 'scale(0)';
+                miniLogo.style.opacity = 1;
+                navBar.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+            }
+            else {
+                logo.style.transform = 'scale(1)';
+                /*miniLogo.style.width = '0';
+                miniLogo.style.height = '0';*/
+                miniLogo.style.opacity = 0;
+                navBar.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+            }
+        }
+    });
 };
