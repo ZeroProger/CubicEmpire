@@ -177,7 +177,7 @@ export default class HystModal{
         }
     }
 
-    
+
     focusCatcher(e){
         const nodes = this.openedWindow.querySelectorAll(this._focusElements);
         const nodesArray = Array.prototype.slice.call(nodes);
@@ -204,7 +204,7 @@ export default class HystModal{
 
         // collect fixel selectors to array
         let fixedSelectors = Array.prototype.slice.call(document.querySelectorAll(this.config.fixedSelectors));
-        
+
         let html = document.documentElement;
         if (this.isOpened === true) {
             html.classList.remove("hystmodal__opened");

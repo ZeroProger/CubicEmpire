@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hystModal-0.4/dist/hystmodal.min.css">
-
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-md">
+        <nav class="navbar fixed-top navbar-expand-lg">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <img src="resources/menu_icon.svg" alt="Меню">
@@ -19,16 +18,16 @@
                 <div class="collapse navbar-collapse justify-content-between navbar-content" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
+                            <a class="nav-link" href="#news-content">Новости</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#manifest-splitter">Манифест</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Вакансии</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#newsContainer">Разработка</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Правила</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Форум</a>
+                            <a class="nav-link" href="#">Поддержать</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -60,7 +59,7 @@
             </p>
         </div>
     </header>
-    <div class="hystmodal" id="modalLogin" aria-hidden="true">
+    <div class="hystmodal" id="modalLogin" aria-hidden="true" data-modal-id="1">
         <div class="hystmodal__wrap">
             <div class="hystmodal__window" role="dialog" aria-modal="true">
                 <button data-hystclose class="close"></button>
@@ -89,16 +88,13 @@
                             <div class="login-submit">
                                 <input type="submit" name="login-submit" id="login-submit" value="Авторизоваться">
                             </div>
-                            <div class="form-registration-button">
-                                <p><a href="#">Регистрация</a></p>
-                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="hystmodal" id="modalRegistration" aria-hidden="true">
+    <div class="hystmodal" id="modalRegistration" aria-hidden="true" data-modal-id="2">
         <div class="hystmodal__wrap">
             <div class="hystmodal__window" role="dialog" aria-modal="true">
                 <button data-hystclose class="close"></button>
@@ -126,19 +122,85 @@
                             <div class="registration-submit">
                                 <input type="submit" name="registration-submit" id="registration-submit" value="Зарегистрироваться">
                             </div>
-                            <div class="form-login-button">
-                                <p><a href="#">Авторизация</a></p>
-                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container page-splitter">
-        <img class="splitter mx-auto" src="resources/splitter.svg" alt="Разделитель" width="1100" height="189">
+    <div class="container page-splitter manifest" id="manifest-splitter">
+        <div class="manifest">
+            <img class="splitter mx-auto" src="resources/splitter_2.png" alt="Разделитель" width="1100" height="189">
+            <h2 class="manifest-text">Манифест</h2>
+        </div>
     </div>
-    <div class="news-container" id="newsContainer">
+    <div class="manifest-description mx-auto">
+        <div>
+            <h3>Чем Cubic Empire будет отличаться от Minecraft?</h3>
+            <p>
+                Как ранее упоминалось, первые релизы будут направлены на техническую часть.
+                Здесь расписаны недостатки Minecraft, которых изначально не будет в Cubic Empire Rust Edition.
+            </p>
+        </div>
+        <div>
+            <span>Java</span>
+            <p>
+                Как известно, Minecraft написан на языке программирования Java.
+                Для команды разработчиков CERE, игра, написанная на Java - заведомо лагающая и, иногда, потребляющая без причин ресурсы устройства.
+                Уверены, что администраторы серверов понимают, о чём речь.
+                Кроме того, для оптимизации клиента Minecraft был разработан мод под названием OptiFine.
+                Также проблема то, что большинству игроков без лицензии приходится устанавливать JRE или JDK для запуска игры - это возмутительно,
+                невинные игроки - программисты или имеют ученую степень по компьютерным наукам?!
+            </p>
+            <p>
+                А ещё, любимый разработчиками, сборщик мусора Java… Нет.
+            </p>
+            <p>
+                Избавляемся от Java! С большим уважением к этому языку и всем, кто на нём программирует, но
+                Cubic Empire Rust Edition будет написан на Rust, о чём говорит даже название игры.
+            </p>
+        </div>
+        <div>
+            <span>Многопоточность</span>
+            <p>
+                Вдобавок к прежнему пункту, Minecraft - однопоточное приложение (сейчас, вроде, серверная часть начала обладать какой-то многопоточностью). Вероятно, читатели с компьютерным образованием понимают, о чём идёт речь, осветим эту тему для всех.
+                Начнём с многопоточности. Многопоточность - это свойство программы выполнять созданные ею процессы одновременно, параллельно, используя несколько потоков.
+                Что же такое поток? Поток - это программно выделенная область в физическом ядре процессора. Такая виртуальная реализация позволяет разделять ресурсы ядра и работать параллельно с двумя разными последовательностями команд. Резюмируя сказанное: многопоточность даёт, порой, значительный буст к производительности.
+                Что не так с многопоточностью в майнкрафт? Как было сказано ранее, изначально игра писалась как однопоточное приложение, как серверная часть, так и клиентская. Это значит, что вдобавок к Java Minecraft выполняет все свои процессы в одном потоке, что усугубляет ситуацию с производительностью, о чём уже говорили, например, здесь и здесь.
+                Учитывая, что в Minecraft играют больше на серверах, факт однопоточного сервера сделал жизнь администраторов крупных серверов настоящим адом, что привело к созданию массивов стороннего ПО, неофициальных ядер и оптимизаций.
+            </p>
+            <p>
+                Cubic Empire Rust Edition изначально будет многопоточным. Как серверная часть, так и клиентская.
+            </p>
+            <p>
+                Поправьте, пожалуйста, этот блок, если обладаете большей информацией о многопоточности и применении этой технологии в Minecraft.
+            </p>
+        </div>
+        <div>
+            <span>Кастоматизация и модификация</span>
+            <p>
+                Ещё одна вечная проблема - отсутствие официальной поддержки модового API. Добавить новые блоки, команды,
+                функционал можно только через невероятное множество неофициального API, например Spigot, Sponge, Forge, Fabric и так далее…
+                Каждая из этих продуктов огромная работа программистов и многие сервера долгое время существуют благодаря им.
+                Однако, для поддержки модов игрокам приходится скачивать дополнительно модовый клиент, допустим, Forge или Fabric,
+                в дополнение, моды, которые, порой, написаны ужасно, несовместимые не только с другими модами, но и с самим ванильным Minecraft.
+                Они выдают много ошибок, создают столько багов и дюпов, что администраторам серверов всей жизни не хватит для фиксов
+                (а пытающиеся есть!).
+                Кроме того, если вы захотите совместить плагины и моды в одном флаконе, вас ждут дополнительные круги ада,
+                потому что любые две разные API из списка выше работают друг с другом только через форки, которые, как правило,
+                в два раза повышают шанс передоза багами.
+            </p>
+            <p>
+                Cubic Empire с самого начала будет официально открыт для модификаций и предоставит отлично задокументированный API для разработчиков модов.
+                Более того, задуман некий реестр модов, где будут публиковаться все дополнения, откуда игроки смогут устанавливать их, не выходя из игры. А администраторам серверов не придётся писать собственные лаунчеры, ядра, убеждаться, что моды на стороне сервера соответствуют модам на стороне клиента и т. п., ведь только указанные в списке сервера моды будут автоматически устанавливаться (если ещё не установлены) и загружаться.
+            </p>
+        </div>
+        <div class="content-ce" id="news-content">
+            Контент Cubic Empire
+            <p>В процессе...</p>
+        </div>
+    </div>
+    <div class="news-container">
         <div class="news-item">
             <div class="news-info">
                 <a href="#">
@@ -272,6 +334,7 @@
             </div>
         </div>
     </div>
+    <
     <footer class="modal-footer">
         <div class="footer-logo>">
             <img class="footer-logo-img" src="resources/logo/cubic_empire_logo.svg" alt="Логотип">
@@ -291,8 +354,8 @@
             © 2021 Cubic Empire. Все права защищены.
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="hystModal-0.4/dist/hystmodal.min.js"></script>
-    <script src="js/script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script defer src="hystModal-0.4/dist/hystmodal.min.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 </html>

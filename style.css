@@ -1,7 +1,7 @@
 body {
     font-family: CubicEmpireRE, serif;
     background-image:   url("resources/backgrounds/back-full.png"),
-                        linear-gradient(#1a6fa3 20%, #012d48 20%);
+                        linear-gradient(#1a6fa3 5%, #012d48 5%);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top center, top center;
@@ -59,9 +59,9 @@ body {
     background-color: rgba(0, 0, 0, 0.6) !important;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
     .navbar-collapse {
-        max-width: 70%;
+        max-width: 80%;
         margin: 0 auto;
     }
 }
@@ -71,26 +71,12 @@ body {
     font-size: 18px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item a {
-        font-size: 14px;
-    }
-
-    .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
-        margin-right: 0.50rem !important;
-    }
-
-    .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:last-child {
-        margin-right: 0 !important;
-    }
-}
-
-@media screen and (min-width: 993px) and (max-width: 1200px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
     .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item a {
         font-size: 18px;
     }
     .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
-        margin-right: 1.0rem !important;
+        margin-right: 0.5rem !important;
     }
 
     .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:last-child {
@@ -108,13 +94,13 @@ body {
     padding-right: 0;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 992px){
     .navbar .container-fluid .navbar-collapse .navbar-nav {
         padding-left: 0.75rem;
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 992px){
     .navbar .container-fluid .navbar-collapse .navbar-nav:first-child {
         margin-top: 10px;
     }
@@ -129,7 +115,7 @@ body {
 }
 
 .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
-    margin-right: 1.25rem;
+    margin-right: 0.75rem;
 }
 
 .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:last-child {
@@ -217,7 +203,7 @@ body {
     margin-top: 150px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .header-description {
         max-width: 70%;
     }
@@ -229,7 +215,7 @@ body {
     }
 }
 
-@media screen and (min-width: 993px) and (max-width: 1200px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
     .header-description {
         max-width: 50%;
     }
@@ -240,7 +226,7 @@ body {
     font-size: 1rem;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .header-description p {
         line-height: 1.5rem;
         font-size: 1rem;
@@ -251,12 +237,142 @@ body {
     width: 70%;
 }
 
-.splitter {
+.page-splitter .splitter {
     display: block;
     width: 100%;
     height: auto;
-    margin-top: 200px;
     margin-bottom: 80px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .page-splitter, .content-ce {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .page-splitter, .content-ce {
+        padding-top:  100px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .page-splitter, .content-ce {
+        padding-top: 120px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .page-splitter, .content-ce {
+        padding-top:  140px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .page-splitter, .content-ce {
+        padding-top:  140px;
+    }
+}
+
+.manifest {
+    position: relative;
+    text-align: center;
+    color: #f2c029;
+}
+
+.manifest-text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+}
+
+.manifest-description {
+    max-width: 40%;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+.manifest-description p {
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+.manifest-description p span {
+    font-size: 2rem;
+}
+
+.manifest-description div span {
+    font-size: 1.5rem;
+}
+
+.manifest-description div h3 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.manifest-description div {
+    margin-bottom: 40px;
+}
+
+.content-ce {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.content-ce p {
+    text-align: left;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .manifest-text {
+        font-size: 14px;
+    }
+
+    .manifest-description {
+        max-width: 70%;
+    }
+
+    .manifest-description p {
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .manifest-text {
+        font-size: 18px;
+    }
+
+    .manifest-description {
+        max-width: 70%;
+    }
+
+    .manifest-description p {
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .manifest-text {
+        font-size: 24px;
+    }
+
+    .manifest-description {
+        max-width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .manifest-text {
+        font-size: 30px;
+    }
+
+    .manifest-description {
+        max-width: 50%;
+    }
 }
 
 .news-container {
@@ -266,6 +382,7 @@ body {
     gap: 30px;
     margin: 0 15%;
     margin-bottom: 300px;
+    display: none;
 }
 
 @media screen and (min-width: 300px) and (max-width: 575px){
@@ -824,8 +941,7 @@ input[type="password"]::placeholder {
     margin-bottom: 30px;
 }
 
-.fields-form .form-registration-button p a,
-.fields-form .form-login-button p a {
+.fields-form .form-change-btn p a {
     text-decoration: none;
     color: white;
 }
@@ -851,6 +967,7 @@ input[type="password"]::placeholder {
     background-color: #083a59;
     border: none;
     padding: 20px 0;
+    margin-bottom: 30px;
     font-size: 16px;
 }
 
@@ -861,8 +978,7 @@ input[type="password"]::placeholder {
     }
 }
 
-.fields-form .form-registration-button p,
-.fields-form .form-login-button p{
+.fields-form .form-change-btn p {
     text-align: center;
     margin: 20px 0;
 }
