@@ -33,24 +33,26 @@ window.onload = function () {
         var logo = document.querySelector('.header-logo-img');
         var miniLogo = document.querySelector('.header-mini-logo-img');
         var navBar = document.querySelector('.navbar');
+        var navBarNavFirst = document.querySelector('.navbar-nav');
         if (window.innerWidth <= 992) {
             if (scrollTop > 120) {
                 logo.style.transform = 'scale(0)';
             } else {
                 logo.style.transform = 'scale(1)';
             }
-        } else {
+        }
+        else {
             if (scrollTop > 0) {
                 logo.style.transform = 'scale(0)';
                 miniLogo.style.opacity = 1;
                 navBar.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                navBarNavFirst.style.marginLeft = '48px';
             }
             else {
                 logo.style.transform = 'scale(1)';
-                /*miniLogo.style.width = '0';
-                miniLogo.style.height = '0';*/
                 miniLogo.style.opacity = 0;
                 navBar.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+                navBarNavFirst.style.marginLeft = '0';
             }
         }
     });
