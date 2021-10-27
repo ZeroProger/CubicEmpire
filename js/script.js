@@ -45,7 +45,7 @@ window.onload = function () {
             if (scrollTop > 0) {
                 logo.style.transform = 'scale(0)';
                 miniLogo.style.opacity = 1;
-                navBar.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
                 navBarNavFirst.style.marginLeft = '48px';
             }
             else {

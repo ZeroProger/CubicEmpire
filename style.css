@@ -62,7 +62,7 @@ body {
 
 @media screen and (max-width: 992px) {
     .navbar {
-        background-color: rgba(0, 0, 0, 0.6) !important;
+        background-color: rgba(2, 34, 54, 1) !important;
         transition: none;
     }
 }
