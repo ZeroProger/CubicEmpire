@@ -35,22 +35,20 @@ window.onload = function () {
         var navBar = document.querySelector('.navbar');
         var navBarNavFirst = document.querySelector('.navbar-nav');
         if (window.innerWidth <= 992) {
-            if (scrollTop > 120) {
-                logo.style.transform = 'scale(0)';
-            } else {
-                logo.style.transform = 'scale(1)';
-            }
+            navBarNavFirst.style.marginLeft = '0';
         }
         else {
-            if (scrollTop > 0) {
+            if (scrollTop > 200) {
                 logo.style.transform = 'scale(0)';
                 miniLogo.style.opacity = 1;
+                miniLogo.style.pointerEvents = 'auto';
                 navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
                 navBarNavFirst.style.marginLeft = '48px';
             }
             else {
                 logo.style.transform = 'scale(1)';
                 miniLogo.style.opacity = 0;
+                miniLogo.style.pointerEvents = 'none';
                 navBar.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
                 navBarNavFirst.style.marginLeft = '0';
             }
