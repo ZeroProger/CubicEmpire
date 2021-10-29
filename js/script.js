@@ -1,9 +1,42 @@
-const myModal = new HystModal({
-    linkAttributeName: "data-hystmodal",
-    backscroll: false,
+$(function() {
+    window.addEventListener("scroll", function(event){
+        let scrollTop = window.pageYOffset;
+        /*var logo = document.querySelector('.header-logo-img');*/
+        var miniLogo = document.querySelector('.header-mini-logo-img');
+        var navBar = document.querySelector('.navbar');
+        var navBarNavFirst = document.querySelector('.navbar-nav');
+        var parallax = document.querySelector('.parallax');
+        if (window.innerWidth <= 992) {
+            navBarNavFirst.style.marginLeft = '0';
+        }
+        else {
+            if (scrollTop > parallax.scrollHeight) {
+                /*logo.style.transform = 'scale(0)';*/
+                miniLogo.style.opacity = 1;
+                miniLogo.style.pointerEvents = 'auto';
+                navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
+                navBarNavFirst.style.marginLeft = '48px';
+            }
+            else {
+                /*logo.style.transform = 'scale(1)';*/
+                miniLogo.style.opacity = 0;
+                miniLogo.style.pointerEvents = 'none';
+                navBar.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+                navBarNavFirst.style.marginLeft = '0';
+            }
+        }
+
+        var layers = $(".parallax__layer");
+        var speed, yPos;
+        layers.each(function() {
+            speed = $(this).attr('data-speed');
+            yPos = -(scrollTop * speed / 100);
+            $(this).attr('style','transform: translate3d(0px, ' + yPos + 'px, 0px)');
+        });
+    });
 });
 
-window.onload = function () {
+/*window.onload = function () {
     var modalForms = document.getElementsByClassName("hystmodal")
     //var changeBtns = document.querySelectorAll('.form-change-btn p a');
     var closeBtns = document.querySelectorAll('.close');
@@ -54,4 +87,4 @@ window.onload = function () {
             }
         }
     });
-};
+};*/
