@@ -17,6 +17,25 @@ window.onload = function () {
         });
     }
 
+    var policyCheckbox = document.getElementById('registration-policy');
+    var registrationSubmitBtn = document.getElementById('registration-submit');
+    if (!policyCheckbox.checked) {
+        registrationSubmitBtn.setAttribute('disabled', 'disabled');
+        registrationSubmitBtn.style.opacity = '0.4';
+    } else {
+        registrationSubmitBtn.removeAttribute('disabled');
+        registrationSubmitBtn.style.opacity = '1';
+    }
+    policyCheckbox.addEventListener('click', function () {
+        if (!policyCheckbox.checked) {
+            registrationSubmitBtn.setAttribute('disabled', 'disabled');
+            registrationSubmitBtn.style.opacity = '0.4';
+        } else {
+            registrationSubmitBtn.removeAttribute('disabled');
+            registrationSubmitBtn.style.opacity = '1';
+        }
+    });
+
     var navBtns = document.querySelectorAll('.nav-item a');
     var navCollapse = document.querySelector('.navbar-collapse');
     var navCollapseBtn = document.querySelector('.navbar-toggler');
