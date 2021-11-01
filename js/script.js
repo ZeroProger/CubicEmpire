@@ -19,21 +19,9 @@ window.onload = function () {
 
     var policyCheckbox = document.getElementById('registration-policy');
     var registrationSubmitBtn = document.getElementById('registration-submit');
-    if (!policyCheckbox.checked) {
-        registrationSubmitBtn.setAttribute('disabled', 'disabled');
-        registrationSubmitBtn.style.opacity = '0.4';
-    } else {
-        registrationSubmitBtn.removeAttribute('disabled');
-        registrationSubmitBtn.style.opacity = '1';
-    }
+    CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
     policyCheckbox.addEventListener('click', function () {
-        if (!policyCheckbox.checked) {
-            registrationSubmitBtn.setAttribute('disabled', 'disabled');
-            registrationSubmitBtn.style.opacity = '0.4';
-        } else {
-            registrationSubmitBtn.removeAttribute('disabled');
-            registrationSubmitBtn.style.opacity = '1';
-        }
+        CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
     });
 
     var navBtns = document.querySelectorAll('.nav-item a');
@@ -47,7 +35,21 @@ window.onload = function () {
         });
     }
 
+    CheckScrollPos();
     window.addEventListener('scroll', function() {
+        CheckScrollPos();
+    });
+    
+    function CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn) {
+        if (!policyCheckbox.checked) {
+            registrationSubmitBtn.setAttribute('disabled', 'disabled');
+            registrationSubmitBtn.style.opacity = '0.4';
+        } else {
+            registrationSubmitBtn.removeAttribute('disabled');
+            registrationSubmitBtn.style.opacity = '1.0';
+        }
+    }
+    function CheckScrollPos() {
         let scrollTop = window.pageYOffset;
         var logo = document.querySelector('.header-logo-img');
         var miniLogo = document.querySelector('.header-mini-logo-img');
@@ -72,5 +74,5 @@ window.onload = function () {
                 navBarNavFirst.style.marginLeft = '0';
             }
         }
-    });
+    }
 };
