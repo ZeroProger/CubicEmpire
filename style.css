@@ -8,7 +8,7 @@
 
 .parallax,
 .parallax__layer {
-    height: 822px;
+    height: 110vh;
 }
 .parallax__layer {
     position: fixed;
