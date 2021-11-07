@@ -3,9 +3,23 @@ const myModal = new HystModal({
     backscroll: false,
 });
 
+$(function() {
+    window.addEventListener("scroll", function(event){
+        var top = this.pageYOffset;
+        var layers = $(".parallax-layer");
+        var speed, yPos;
+        layers.each(function() {
+            speed = $(this).attr('data-speed');
+            console.log(speed);
+            yPos = -(top * speed / 100);
+            $(this).attr('style','transform: translate3d(0px, ' + yPos + 'px, 0px)');
+        });
+    });
+});
+
+
 window.onload = function () {
     var modalForms = document.getElementsByClassName("hystmodal")
-    //var changeBtns = document.querySelectorAll('.form-change-btn p a');
     var closeBtns = document.querySelectorAll('.close');
 
     for (var closeBtn of closeBtns) {
@@ -60,14 +74,14 @@ window.onload = function () {
         }
         else {
             if (scrollTop > 200) {
-                logo.style.transform = 'scale(0)';
+                /*logo.style.transform = 'scale(0)';*/
                 miniLogo.style.opacity = 1;
                 miniLogo.style.pointerEvents = 'auto';
                 navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
                 navBarNavFirst.style.marginLeft = '48px';
             }
             else {
-                logo.style.transform = 'scale(1)';
+                /*logo.style.transform = 'scale(1)';*/
                 miniLogo.style.opacity = 0;
                 miniLogo.style.pointerEvents = 'none';
                 navBar.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
