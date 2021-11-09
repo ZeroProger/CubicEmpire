@@ -1,5 +1,6 @@
 * {
     font-family: "CubicEmpireRE", serif;
+    ;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -42,10 +43,30 @@ html, body {
     background-image: url("resources/backgrounds/increased_back6_fix.png");
 }
 
+@media screen and (max-width: 992px) {
+    .parallax-layer {
+        display: none;
+    }
+
+    .parallax {
+        height: 900px;
+        background-color: #1a6fa3;
+        background-image:   url("resources/backgrounds/back-full.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top 200px left, top left;
+    }
+
+    .content-container-bg {
+        background-color: #012d48 !important;
+    }
+}
+
 .content-container-bg {
     position: relative;
     background-color: #002947;
     z-index: 100;
+    top: -20px;
 }
 
 @media screen and (min-width: 300px) and (max-width: 1200px) {
@@ -169,7 +190,7 @@ html, body {
     top: 540px;
     left: 5%;
     right: 5%;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .manifest-splitter {
@@ -200,7 +221,7 @@ html, body {
 }
 
 .manifest-description {
-    max-width: 500px;
+    max-width: 600px;
     width: 90%;
     color: #ffffff;
     margin-top: 50px;
@@ -244,6 +265,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     z-index: 101;
+    margin-top: -20px;
 }
 
 .footer-logo {
