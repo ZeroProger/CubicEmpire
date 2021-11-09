@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Вход</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div class="log-reg-page-container">
+        <div class="header-logo">
+            <a href="index.html"><img class="header-logo-img mx-auto" src="resources/logo/cubic_empire_logo.svg" alt="Логотип" width="220" height="220"></a>
+        </div>
+        <div class="login-form">
+            <div class="form-title">
+                <h2>Авторизация</h2>
+            </div>
+            <div class="fields-form">
+                <form action="#" method="post">
+                    <div class="email">
+                        <input type="email" name="login-email" id="login-email" placeholder="Почта">
+                    </div>
+                    <div class="password">
+                        <input type="password" name="login-password" id="login-password" placeholder="Пароль">
+                    </div>
+                    <div class="form-checkbox" id="remember-checkbox">
+                        <input type="checkbox" class="custom-checkbox" name="login-remember-me" id="login-remember-me">
+                        <label for="login-remember-me">Запомнить меня</label>
+                    </div>
+                    <div class="captcha">
+                        <img class="captcha-img" alt="captcha" src="resources/captcha.png" width="268" height="67">
+                    </div>
+                    <div class="reset-password">
+                        <p>Не удаётся войти? <a href="#">Восстановить доступ</a></p>
+                    </div>
+                    <div class="login-submit">
+                        <input type="submit" name="login-submit" id="login-submit" value="Авторизоваться">
+                    </div>
+                </form>
+                <div class="form-change-btn">
+                    <a href="registration.html">Регистрация</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-socials">
+            <div class="social-item">
+                <a href="https://discord.gg/XbG4jqe" target="_blank"><img class="img-fluid" src="resources/logo/discord.png" alt="Discord" width="50" height="50"></a>
+            </div>
+            <div class="social-item">
+                <a href="https://patreon.com" target="_blank"><img class="img-fluid" src="resources/logo/patreon.png" alt="Patreon" height="44" width="36"></a>
+            </div>
+            <div class="social-item">
+                <a href="https://mail.ru" target="_blank"><img class="img-fluid" src="resources/logo/mail.png" alt="Mail" width="50" height="39"></a>
+            </div>
+        </div>
+    </div>
+    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script defer src="hystModal-0.4/dist/hystmodal.min.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 </html>
