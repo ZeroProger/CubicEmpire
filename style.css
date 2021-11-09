@@ -700,7 +700,7 @@ input[type="password"]::placeholder {
 }
 
 .log-reg-page-container .login-form,
-.log-reg-page-container .registration-form registration-policy{
+.log-reg-page-container .registration-form .registration-policy {
     width: 100%;
 }
 
