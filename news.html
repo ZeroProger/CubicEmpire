@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Новости</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hystModal-0.4/dist/hystmodal.min.css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="resources/menu_icon.svg" alt="Меню">
+            </button>
+            <div class="header-mini-logo">
+                <a href="index.html"><img class="header-mini-logo-img" src="resources/logo/logo-mini.svg" alt="Мини лого" width="48" height="48"></a>
+            </div>
+            <div class="collapse navbar-collapse justify-content-between navbar-content" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#manifest-splitter">Манифест</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Вакансии</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Поддержать</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="#modalLogin" data-hystmodal="#modalLogin">Вход</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="#modalRegistration" data-hystmodal="#modalRegistration">Регистрация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Мой профиль</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hystmodal" id="modalLogin" aria-hidden="true" data-modal-id="1">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="close"></button>
+                <div class="login-form">
+                    <div class="form-title">
+                        <h2>Авторизация</h2>
+                    </div>
+                    <div class="fields-form">
+                        <form action="#" method="post">
+                            <div class="email">
+                                <input type="email" name="login-email" id="login-email" placeholder="Почта">
+                            </div>
+                            <div class="password">
+                                <input type="password" name="login-password" id="login-password" placeholder="Пароль">
+                            </div>
+                            <div class="form-checkbox" id="remember-checkbox">
+                                <input type="checkbox" class="custom-checkbox" name="login-remember-me" id="login-remember-me">
+                                <label for="login-remember-me">Запомнить меня</label>
+                            </div>
+                            <div class="captcha">
+                                <img class="captcha-img" alt="captcha" src="resources/captcha.png" width="268" height="67">
+                            </div>
+                            <div class="reset-password">
+                                <p>Не удаётся войти? <a href="#">Восстановить доступ</a></p>
+                            </div>
+                            <div class="login-submit">
+                                <input type="submit" name="login-submit" id="login-submit" value="Авторизоваться">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="modalRegistration" aria-hidden="true" data-modal-id="2">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="close"></button>
+                <div class="registration-form">
+                    <div class="form-title">
+                        <h2>Регистрация</h2>
+                    </div>
+                    <div class="fields-form">
+                        <form action="#" method="post">
+                            <div class="email">
+                                <input type="email" name="registration-email" id="registration-email" placeholder="Почта">
+                            </div>
+                            <div class="password">
+                                <input type="password" name="registration-password" id="registration-password" placeholder="Пароль">
+                            </div>
+                            <div class="form-checkbox" id="policy-checkbox">
+                                <input type="checkbox" class="custom-checkbox" name="registration-policy" id="registration-policy">
+                                <label for="registration-policy">
+                                    Согласен с условиями <a href="#">лицензионного соглашения</a> и <a href="#">политикой конфиденциальности</a>
+                                </label>
+                            </div>
+                            <div class="captcha">
+                                <img class="captcha-img" alt="captcha" src="resources/captcha.png" width="268" height="67">
+                            </div>
+                            <div class="registration-submit">
+                                <input type="submit" name="registration-submit" id="registration-submit" value="Зарегистрироваться">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container content-splitter content-splitter-news" id="manifest-splitter">
+        <div class="splitter-container">
+            <img class="splitter-img mx-auto" src="resources/splitter.png" alt="Разделитель" width="1120" height="54">
+            <h2 class="splitter-text">Новости</h2>
+        </div>
+        <div class="news-container">
+            <div class="news-column">
+                <div class="news-item">
+                    <div class="news-info">
+                        <a href="#">
+                            <figure>
+                                <img class="" src="resources/news_images/bow.png" alt="Голем">
+                                <figcaption><span>Новость</span></figcaption>
+                            </figure>
+                        </a>
+                        <div class="news-description">
+                            <p>
+                                Базовый вектор развития в значительной степени обусловливает важность поэтапного и последовательного развития общества. Современные технологии достигли такого уровня, что дальнейшее развитие различных форм деятельности является качественно новой ступенью системы массового участия. Мы вынуждены отталкиваться от того, что социально-экономическое развитие создаёт предпосылки для укрепления моральных ценностей. Разнообразный и богатый опыт говорит нам, что базовый вектор развития не оставляет шанса для системы массового участия. Принимая во внимание показатели успешности, высокое качество позиционных исследований однозначно определяет каждого участника как способного принимать собственные решения касаемо своевременного выполнения сверхзадачи.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-footer">
+                        <span>TheTriangle</span>
+                        <span>07.10.21 22:30</span>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-info">
+                        <a href="#">
+                            <figure>
+                                <img class="" src="resources/news_images/golem.png" alt="Дерево">
+                                <figcaption><span>Новость</span></figcaption>
+                            </figure>
+                        </a>
+                        <div class="news-description">
+                            <p>
+                                Современные технологии достигли такого уровня, что разбавленное изрядной долей эмпатии, рациональное мышление играет важную роль в формировании экономической целесообразности принимаемых решений. А ещё ключевые особенности структуры проекта неоднозначны и будут объявлены нарушающими общечеловеческие нормы этики и морали.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-footer">
+                        <span>ZzemOxyz</span>
+                        <span>29.09.21 18:15</span>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-info">
+                        <a href="#">
+                            <figure>
+                                <img class="" src="resources/news_images/landscape.png" alt="Дерево">
+                                <figcaption><span>Новость</span></figcaption>
+                            </figure>
+                        </a>
+                        <div class="news-description">
+                            <p>
+                                Сложно сказать, почему реплицированные с зарубежных источников, современные исследования лишь добавляют фракционных разногласий и описаны максимально подробно. Следует отметить, что синтетическое тестирование обеспечивает актуальность новых предложений.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-footer">
+                        <span>ZzemOxyz</span>
+                        <span>29.09.21 18:15</span>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-info">
+                        <a href="#">
+                            <figure>
+                                <img class="" src="resources/news_images/golem.png" alt="Дерево">
+                                <figcaption><span>Новость</span></figcaption>
+                            </figure>
+                        </a>
+                        <div class="news-description">
+                            <p>
+                                Кстати, явные признаки победы институционализации преданы социально-демократической анафеме. Также как реализация намеченных плановых заданий является качественно новой ступенью существующих финансовых и административных условий.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-footer">
+                        <span>ZzemOxyz</span>
+                        <span>29.09.21 18:15</span>
+                    </div>
+                </div>
+            </div>
+            <div class="news-column">
+                <div class="news-item">
+                    <div class="news-info">
+                        <a href="#">
+                            <figure>
+                                <img class="" src="resources/news_images/sword.png" alt="Дерево">
+                                <figcaption><span>Новость</span></figcaption>
+                            </figure>
+                        </a>
+                        <div class="news-description">
+                            <p>
+                                Противоположная точка зрения подразумевает, что акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть описаны максимально подробно. Современные технологии достигли такого уровня, что дальнейшее развитие различных форм деятельности напрямую зависит от поэтапного и последовательного развития общества.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-footer">
+                        <span>ZzemOxyz</span>
+                        <span>29.09.21 18:15</span>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-info">
+                        <a href="#">
+                            <figure>
+                                <img class="" src="resources/news_images/tree.png" alt="Дерево">
+                                <figcaption><span>Новость</span></figcaption>
+                            </figure>
+                        </a>
+                        <div class="news-description">
+                            <p>
+                                Лишь некоторые особенности внутренней политики освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Современные технологии достигли такого уровня, что высокотехнологичная концепция общественного уклада выявляет срочную потребность поставленных обществом задач.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-footer">
+                        <span>ZzemOxyz</span>
+                        <span>29.09.21 18:15</span>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-info">
+                        <a href="#">
+                            <figure>
+                                <img class="" src="resources/news_images/landscape.png" alt="Дерево">
+                                <figcaption><span>Новость</span></figcaption>
+                            </figure>
+                        </a>
+                        <div class="news-description">
+                            <p>
+                                В рамках спецификации современных стандартов, стремящиеся вытеснить традиционное производство, нанотехнологии неоднозначны и будут указаны как претенденты на роль ключевых факторов. Противоположная точка зрения подразумевает, что диаграммы связей являются только методом политического участия и рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-footer">
+                        <span>ZzemOxyz</span>
+                        <span>29.09.21 18:15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script defer src="hystModal-0.4/dist/hystmodal.min.js"></script>
+    <script defer src="js/script.js"></script>
+</body>
+</html>

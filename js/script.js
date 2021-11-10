@@ -19,6 +19,8 @@ $(function() {
 
 
 window.onload = function () {
+    var pageHref = window.location.href;
+    var pageName = pageHref.substring(pageHref.lastIndexOf('/') + 1, pageHref.length);
     var modalForms = document.getElementsByClassName("hystmodal")
     var closeBtns = document.querySelectorAll('.close');
 
@@ -48,11 +50,23 @@ window.onload = function () {
             navCollapseBtn.setAttribute('aria-expanded', 'false');
         });
     }
-
-    CheckScrollPos();
-    window.addEventListener('scroll', function() {
+    if (pageName === "index.html") {
         CheckScrollPos();
-    });
+        window.addEventListener('scroll', function() {
+            CheckScrollPos();
+        });
+    } else {
+        var miniLogo = document.querySelector('.header-mini-logo-img');
+        var navBar = document.querySelector('.navbar');
+        var navBarNavFirst = document.querySelector('.navbar-nav');
+
+        miniLogo.style.transition = 'none';
+        navBarNavFirst.style.transition = 'none';
+        miniLogo.style.opacity = 1;
+        miniLogo.style.pointerEvents = 'auto';
+        navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
+        navBarNavFirst.style.marginLeft = '48px';
+    }
     
     function CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn) {
         if (!policyCheckbox.checked) {
