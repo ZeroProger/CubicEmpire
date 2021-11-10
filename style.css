@@ -395,10 +395,6 @@ html, body {
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
-    .hystmodal__window {
-        width: 80% !important;
-    }
-
     .fields-form form {
         width: 70%;
     }
@@ -426,10 +422,6 @@ html, body {
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    .hystmodal__window {
-        width: 70% !important;
-    }
-
     .fields-form form {
         width: 70%;
     }
@@ -445,10 +437,6 @@ html, body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    .hystmodal__window {
-        width: 50% !important;
-    }
-
     .fields-form form {
         width: 60%;
     }
@@ -464,10 +452,6 @@ html, body {
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-    .hystmodal__window {
-        width: 40% !important;
-    }
-
     .fields-form form {
         width: 60%;
     }
@@ -483,10 +467,6 @@ html, body {
 }
 
 @media screen and (min-width: 1200px) {
-    .hystmodal__window {
-        width: 30% !important;
-    }
-
     .fields-form form {
         width: 70%;
     }
@@ -529,6 +509,13 @@ input[type="password"]::placeholder {
     align-items: center;
     max-width: 500px;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 576px) {
+    .login-form,
+    .registration-form {
+        width: 90%;
+    }
 }
 
 .fields-form {
@@ -700,7 +687,7 @@ input[type="password"]::placeholder {
 }
 
 .log-reg-page-container .login-form,
-.log-reg-page-container .registration-form registration-policy{
+.log-reg-page-container .registration-form .registration-policy{
     width: 100%;
 }
 
@@ -714,6 +701,16 @@ input[type="password"]::placeholder {
 }
 
 /* Modal Login and Registration */
+
+.hystmodal__window {
+    max-width: 500px !important;
+}
+
+@media screen and (max-width: 576px) {
+    .hystmodal__window {
+        background-color: #012d48 !important;
+    }
+}
 
 @font-face {
     font-family: "CubicEmpireRE";
