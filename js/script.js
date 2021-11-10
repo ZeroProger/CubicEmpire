@@ -31,14 +31,23 @@ window.onload = function () {
         });
     }
 
-    if (navBar.classList.contains('navbar-index-page')
-        || navBar.classList.contains('navbar-log-reg')) {
+    if (navBar.classList.contains('navbar-index-page')) {
         var policyCheckbox = document.getElementById('registration-policy');
         var registrationSubmitBtn = document.getElementById('registration-submit');
         CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
         policyCheckbox.addEventListener('click', function () {
             CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
         });
+    } else if (navBar.classList.contains('navbar-log-reg')) {
+        var checkBox = document.querySelector('.form-checkbox');
+        if (checkBox.id === "policy-checkbox") {
+            var policyCheckbox = document.getElementById('registration-policy');
+            var registrationSubmitBtn = document.getElementById('registration-submit');
+            CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
+            policyCheckbox.addEventListener('click', function () {
+                CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
+            });
+        }
     }
 
     var navBtns = document.querySelectorAll('.nav-item a');
@@ -51,7 +60,6 @@ window.onload = function () {
             navCollapseBtn.setAttribute('aria-expanded', 'false');
         });
     }
-    
     if (!navBar.classList.contains('navbar-index-page')) {
         if (!navBar.classList.contains('navbar-log-reg')) {
             var miniLogo = document.querySelector('.header-mini-logo-img');
@@ -62,11 +70,56 @@ window.onload = function () {
             miniLogo.style.opacity = 1;
             miniLogo.style.pointerEvents = 'auto';
             navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
-            navBarNavFirst.style.marginLeft = '48px';
+            if (window.innerWidth > 992) {
+                navBarNavFirst.style.marginLeft = '48px';
+            }
+            window.onresize = function () {
+                if (window.innerWidth > 992) {
+                    navBarNavFirst.style.marginLeft = '48px';
+                } else {
+                    navBarNavFirst.style.marginLeft = '0';
+                }
+            }
         } else if (navBar.classList.contains('navbar-log-reg')) {
-            navCollapse.classList.remove("justify-content-between");
-            navCollapse.classList.add("justify-content-center");
-            navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
+            var navItems = navBar.getElementsByClassName('nav-item');
+            if(window.innerWidth > 992) {
+                navCollapse.classList.remove("justify-content-between");
+                navCollapse.classList.add("justify-content-center");
+                navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
+                
+                for (var navItem of navItems) {
+                    navItem.style.width = "140px";
+                    navItem.style.textAlign = "center";
+                }
+            } else {
+                var navBarNavFirst = document.querySelector('.navbar-nav');
+                navBarNavFirst.style.marginTop = "0";
+                for (var navItem of navItems) {
+                    navItem.style.width = "auto";
+                    navItem.style.textAlign = "left";
+                }
+            }
+            window.onresize = function () {
+                var navItems = navBar.getElementsByClassName('nav-item');
+                if(window.innerWidth > 992) {
+                    navCollapse.classList.remove("justify-content-between");
+                    navCollapse.classList.add("justify-content-center");
+                    navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
+                    
+                    for (var navItem of navItems) {
+                        navItem.style.width = "140px";
+                        navItem.style.textAlign = "center";
+                    }
+                } else {
+                    var navBarNavFirst = document.querySelector('.navbar-nav');
+                    navBarNavFirst.style.marginTop = "0";
+                    navBarNavFirst.style.marginLeft = '0';
+                    for (var navItem of navItems) {
+                        navItem.style.width = "auto";
+                        navItem.style.textAlign = "left";
+                    }
+                }
+            }
         }
     } else {
         CheckScrollPos();
