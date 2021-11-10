@@ -50,6 +50,7 @@ window.onload = function () {
             navCollapseBtn.setAttribute('aria-expanded', 'false');
         });
     }
+    console.log(pageName);
     if (pageName === "index.html") {
         CheckScrollPos();
         window.addEventListener('scroll', function() {
