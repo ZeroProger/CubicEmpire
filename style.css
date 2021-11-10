@@ -120,6 +120,12 @@ html, body {
     font-size: 1rem;
 }
 
+@media screen and (max-width: 992px) {
+    .navbar .container-fluid .navbar-collapse .navbar-nav:last-child {
+        margin-top: 32px;
+    }
+}
+
 .navbar-toggler {
     border: none;
     transition: none;
@@ -687,7 +693,7 @@ input[type="password"]::placeholder {
 }
 
 .log-reg-page-container .login-form,
-.log-reg-page-container .registration-form .registration-policy{
+.log-reg-page-container .registration-form .registration-policy {
     width: 100%;
 }
 
