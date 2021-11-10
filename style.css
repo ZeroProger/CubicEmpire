@@ -86,10 +86,6 @@ html, body {
     }
 }
 
-.navbar-news {
-    background-color: rgba(2, 34, 54, 1);
-}
-
 @media screen and (max-width: 1200px) {
     .navbar {
         max-width: 100%;
@@ -104,10 +100,6 @@ html, body {
 
     .navbar-collapse .navbar-nav:first-child {
         transition: margin-left .3s ease-in-out;
-    }
-
-    .navbar-collapse-news .navbar-nav:first-child {
-        margin-left: 48px;
     }
 }
 
@@ -149,14 +141,6 @@ html, body {
 @media screen and (max-width: 992px){
     .header-mini-logo-img {
         display: none;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .header-mini-logo-img-news {
-        display: block;
-        opacity: 1;
-        pointer-events: auto;
     }
 }
 
@@ -761,7 +745,7 @@ input[type="password"]::placeholder {
     top: 0;
     left: 0;
     right: 0;
-    margin-top: 20px;
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 

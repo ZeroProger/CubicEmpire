@@ -17,11 +17,9 @@ $(function() {
     });
 });
 
-
 window.onload = function () {
-    var pageHref = window.location.href;
-    var pageName = pageHref.substring(pageHref.lastIndexOf('/') + 1, pageHref.length);
     var modalForms = document.getElementsByClassName("hystmodal")
+    var navBar = document.querySelector('.navbar');
     var closeBtns = document.querySelectorAll('.close');
 
     for (var closeBtn of closeBtns) {
@@ -33,12 +31,15 @@ window.onload = function () {
         });
     }
 
-    var policyCheckbox = document.getElementById('registration-policy');
-    var registrationSubmitBtn = document.getElementById('registration-submit');
-    CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
-    policyCheckbox.addEventListener('click', function () {
+    if (navBar.classList.contains('navbar-index-page')
+        || navBar.classList.contains('navbar-log-reg')) {
+        var policyCheckbox = document.getElementById('registration-policy');
+        var registrationSubmitBtn = document.getElementById('registration-submit');
         CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
-    });
+        policyCheckbox.addEventListener('click', function () {
+            CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
+        });
+    }
 
     var navBtns = document.querySelectorAll('.nav-item a');
     var navCollapse = document.querySelector('.navbar-collapse');
@@ -50,22 +51,28 @@ window.onload = function () {
             navCollapseBtn.setAttribute('aria-expanded', 'false');
         });
     }
-    if (pageName === "index.html") {
+    
+    if (!navBar.classList.contains('navbar-index-page')) {
+        if (!navBar.classList.contains('navbar-log-reg')) {
+            var miniLogo = document.querySelector('.header-mini-logo-img');
+            var navBarNavFirst = document.querySelector('.navbar-nav');
+
+            miniLogo.style.transition = 'none';
+            navBarNavFirst.style.transition = 'none';
+            miniLogo.style.opacity = 1;
+            miniLogo.style.pointerEvents = 'auto';
+            navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
+            navBarNavFirst.style.marginLeft = '48px';
+        } else if (navBar.classList.contains('navbar-log-reg')) {
+            navCollapse.classList.remove("justify-content-between");
+            navCollapse.classList.add("justify-content-center");
+            navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
+        }
+    } else {
         CheckScrollPos();
         window.addEventListener('scroll', function() {
             CheckScrollPos();
         });
-    } else {
-        var miniLogo = document.querySelector('.header-mini-logo-img');
-        var navBar = document.querySelector('.navbar');
-        var navBarNavFirst = document.querySelector('.navbar-nav');
-
-        miniLogo.style.transition = 'none';
-        navBarNavFirst.style.transition = 'none';
-        miniLogo.style.opacity = 1;
-        miniLogo.style.pointerEvents = 'auto';
-        navBar.style.backgroundColor = 'rgba(2, 34, 54, 1)';
-        navBarNavFirst.style.marginLeft = '48px';
     }
     
     function CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn) {

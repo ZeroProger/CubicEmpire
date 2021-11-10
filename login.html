@@ -5,9 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Вход</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar navbar-log-reg fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="resources/menu_icon.svg" alt="Меню">
+            </button>
+            <div class="header-mini-logo">
+                <a href="index.html"><img class="header-mini-logo-img" src="resources/logo/logo-mini.svg" alt="Мини лого" width="48" height="48"></a>
+            </div>
+            <div class="collapse navbar-collapse justify-content-between navbar-content" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#manifest-splitter">Манифест</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Вакансии</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Поддержать</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="log-reg-page-container">
         <div class="header-logo">
             <a href="index.html"><img class="header-logo-img mx-auto" src="resources/logo/cubic_empire_logo.svg" alt="Логотип" width="220" height="220"></a>
@@ -56,6 +83,7 @@
         </div>
     </div>
     <script defer src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script defer src="hystModal-0.4/dist/hystmodal.min.js"></script>
     <script defer src="js/script.js"></script>
 </body>
