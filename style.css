@@ -199,6 +199,20 @@ html, body {
     padding-top: 100px;
 }
 
+.header-logo-img-news {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .content-splitter-news {
+        padding-top: 300px;
+    }
+
+    .header-logo-img-news {
+        display: block;
+    }
+}
+
 .content-splitter .splitter-img {
     display: block;
     width: 100%;
@@ -258,6 +272,11 @@ html, body {
 }
 
 /* News */
+
+.content-container-news {
+    max-width: 1200px;
+}
+
 .news-container {
     width: 100%;
     display: grid;
