@@ -30,15 +30,8 @@ window.onload = function () {
             }
         });
     }
-
-    if (navBar.classList.contains('navbar-index-page')) {
-        var policyCheckbox = document.getElementById('registration-policy');
-        var registrationSubmitBtn = document.getElementById('registration-submit');
-        CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
-        policyCheckbox.addEventListener('click', function () {
-            CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
-        });
-    } else if (navBar.classList.contains('navbar-log-reg')) {
+    
+    if (navBar.classList.contains('navbar-log-reg')) {
         var checkBox = document.querySelector('.form-checkbox');
         if (checkBox.id === "policy-checkbox") {
             var policyCheckbox = document.getElementById('registration-policy');
@@ -48,6 +41,13 @@ window.onload = function () {
                 CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
             });
         }
+    } else {
+        var policyCheckbox = document.getElementById('registration-policy');
+        var registrationSubmitBtn = document.getElementById('registration-submit');
+        CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
+        policyCheckbox.addEventListener('click', function () {
+            CheckPolicyCheckBox(policyCheckbox, registrationSubmitBtn);
+        });
     }
 
     var navBtns = document.querySelectorAll('.nav-item a');
